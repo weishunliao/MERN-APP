@@ -2,18 +2,19 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const router = require('./routes/router');
-const db = require('./db');
+require('./db');
 const cors = require('cors');
+require('./routes/passport');
+const passport = require("passport");
 
-app.use(bodyParser.urlencoded({ extended: true }));
+
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(cors());
-
+app.use(passport.initialize());
+app.use(passport.session());
 app.use('/api', router);
 
-app.get('/', (req, resp) => {
-    resp.send("Hello");
-});
 
 app.listen(3000, function (err) {
     if (err) {

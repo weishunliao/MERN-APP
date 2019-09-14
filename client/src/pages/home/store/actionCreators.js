@@ -3,7 +3,7 @@ import axios from "axios";
 
 export const getArticleListAction = () => {
     return (dispatch) => {
-        axios.get('http://localhost:3000/api/articles').then((resp) => {
+        axios.get('api/articles').then((resp) => {
             dispatch({
                 type:GETARTICLELIST,
                 articles: resp.data.data,
@@ -16,7 +16,7 @@ export const getArticleListAction = () => {
 
 export const getPopularListAction = () => {
     return (dispatch) => {
-        axios.get('http://localhost:3000/api/populars').then((resp) => {
+        axios.get('api/populars').then((resp) => {
             dispatch({
                 type:GETPOPULARLIST,
                 popularList: resp.data.data,

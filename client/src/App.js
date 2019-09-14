@@ -6,6 +6,7 @@ import Header from "./common/header";
 import Home from "./pages/home";
 import Detail from "./pages/detail/loadable";
 import Login from "./pages/login";
+import SignUp from './pages/signUp';
 import store from "./store";
 
 
@@ -20,6 +21,7 @@ function App() {
                         <Route exact path="/" component={Home} />
                         <Route exact path="/detail/:id" component={Detail}/>
                         <Route exact path="/login" component={Login}/>
+                        <Route exact path="/signUp" component={SignUp}/>
                     </div>
                 </BrowserRouter>
             </Fragment>

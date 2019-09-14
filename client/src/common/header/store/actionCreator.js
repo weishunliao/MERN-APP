@@ -25,7 +25,7 @@ const shuffle = (a) => {
 
 export const getSearchSuggestionList = () => {
     return (dispatch) => {
-        axios.get('http://localhost:3000/api/suggestions').then((resp) => {
+        axios.get('/api/suggestions').then((resp) => {
             let action = {
                 type: UPDATESEARCHLIST,
                 data: shuffle(resp.data.data[0].list),

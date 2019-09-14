@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import 'semantic-ui-css/semantic.min.css'
 import {Button, Form} from 'semantic-ui-react'
 import {connect} from "react-redux";
-import {Link, Redirect} from 'react-router-dom';
+import {Redirect} from 'react-router-dom';
 import {handleNameInputChangeAction, handlePasswordInputChangeAction, handleSubmitAction} from "./store/actionCreator";
 
 class Login extends Component {
@@ -24,8 +24,6 @@ class Login extends Component {
                 <Button type='submit' style={{float: "left"}} onClick={() => {
                     this.props.handleSubmit(this.props.inputName, this.props.inputPassword)
                 }}>Submit</Button>
-                <Link to={"/signUp"} style={{color: "white"}}><div><Button style={{float: "right"}} variant="outlined">
-                    Sign up</Button></div></Link>
             </Form>
         );
     }
@@ -37,7 +35,6 @@ const mapStateToProps = (state) => {
         inputName: state.getIn(['login', 'inputName']),
         inputPassword: state.getIn(['login', 'inputPassword']),
         login: state.getIn(['login', 'login']),
-        loginFail:state.getIn(['login','loginFail']),
     }
 };
 

@@ -1,4 +1,4 @@
-import {NAMEINPUTCHANGE, PASSWORDINPUTCHANGE, USERLOGIN, USERLOGOUT, USERLOGINFAIL} from "./constants";
+import {NAMEINPUTCHANGE, PASSWORDINPUTCHANGE, USERLOGIN} from "./constants";
 import axios from 'axios';
 
 export const handleNameInputChangeAction = (newValue) => {
@@ -17,32 +17,23 @@ export const handlePasswordInputChangeAction = (newValue) => {
 
 export const handleSubmitAction = (name, password) => {
     return (dispatch) => {
-        axios.post('/api/login', {"username": name, "password": password}).then((resp) => {
-            if (resp.data.status === 200) {
+        axios.post('/api/signUp', {"username": name, "password": password}).then((resp) => {
+            if (resp.status === 201) {
                 dispatch({
                     type: USERLOGIN,
                     value: true,
                 });
-            } else {
-                window.alert("Wrong password or name.");
+            }else {
                 dispatch({
-                    type: USERLOGINFAIL,
-                    value: true,
+                    type: USERLOGIN,
+                    value: false,
                 });
             }
         }).catch(() => {
-            window.alert("Wrong password or name.");
             dispatch({
-                type: USERLOGINFAIL,
-                value: true,
+                type: USERLOGIN,
+                value: false,
             });
         });
     };
-};
-
-export const getHandleSignOutAction = () => {
-    return {
-        type: USERLOGOUT,
-        value: false,
-    }
 };
