@@ -1,0 +1,30 @@
+[{
+  "id": 1,
+"subtitle": "TECHNOLOGY",
+"title": "73 Mind-Blowing Implications of Driverless Cars and Trucks",
+"paragraph": "An updated look at all the ways that autonomous vehicles will change our lives in profound ways.",
+"imgUrl": "https://cdn-images-1.medium.com/fit/c/304/312/1*jZLOWAI_M_f4Wo1WEsMZgw.jpeg"
+},
+{
+  "id": 2,
+"subtitle": "BASED ON YOUR READING HISTORY",
+"title": "The most difficult things about learning to code by yourself — and how to tackle them",
+"paragraph": "Many people have become interested in learning to code in recent years.",
+"imgUrl": "https://miro.medium.com/max/11622/0*yLaEVLIg1dFOUE5o"
+},
+{
+  "id": 3,
+"subtitle": "BASED ON YOUR READING HISTORY",
+"title": "Lessons learned from my journey as a self-taught developer",
+"paragraph": "The path of the self-taught developer is tough and clouded with uncertainty. There is no straight line from newbie to career programmer. Because of this, I believe all self-taught developers have a unique story to tell.",
+"imgUrl": "https://cdn-images-1.medium.com/fit/c/304/312/1*PtqX1qpPZ8Yi0bRTkzmtUw.png"
+},
+  {
+    "id": 4,
+    "subtitle": "SOFTWARE ENGINEERING",
+    "title": "An overview of Visual Studio Code for front-end developers",
+    "paragraph": "No matter whether you are a code newbie or a seasoned developer, code editor is an imperative part of your work. The problem, especially if…",
+    "imgUrl": "https://miro.medium.com/max/4400/1*fEUJfqoKCP2YsEHBfXUVBw.jpeg"
+  }
+]
+
